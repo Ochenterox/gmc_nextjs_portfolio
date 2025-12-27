@@ -59,14 +59,16 @@ export default function AboutPage() {
         </div>
         <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_18px_70px_rgba(0,0,0,0.5)]">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-emerald-500/10" />
-          <Image
-            src="/images/profile-portrait.svg"
-            alt="Portrait illustration"
-            width={520}
-            height={520}
-            className="relative z-10 h-auto w-full"
-            priority
-          />
+          <div className="relative z-10 aspect-[4/5] w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/hero.webp"
+              alt="Abdenasser Mohammedi portrait"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 520px"
+              className="object-cover"
+            />
+          </div>
           <div className="relative z-10 mt-3 rounded-2xl border border-white/10 bg-slate-900/80 p-4 text-sm text-slate-200">
             <p className="text-xs uppercase tracking-[0.3em] text-emerald-200">
               Principles
